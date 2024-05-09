@@ -27,14 +27,29 @@ h1, h2, {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    color: purple;
+    color: #800080;
     background-color: #4A148C;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease
+    transition: background-color 0.3s ease;
 }
 
 /* button hover */
 .btn:hover {
     background-color: #6A1B9A;
+}
+.cards-2-5 {
+    display: flex;
+}
+
+.cards-3-5 {
+    display: flex;
+}
+
+.cards-4-5 {
+    display: flex;
+}
+
+.cards-5-5 {
+    display: flex;
 }
