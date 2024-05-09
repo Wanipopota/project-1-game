@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+/* Font information */
+.open-sans-body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth 100";
+}
+
 /* Body Style */
 body {
     font-family: sans-serif;
@@ -12,7 +21,7 @@ body {
 
 }
 /* Style header */
-h1, h2, {
+h1, h2 {
     color: #B5B5B5;
     text-align: center;
 }
