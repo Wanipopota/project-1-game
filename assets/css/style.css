@@ -1,3 +1,43 @@
+/* Margin & Padding */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: sans-serif;
+    background-color: #4A148C;
+
+}
+/* Style header */
+h1, h2, {
+    color: #B5B5B5;
+    text-align: center;
+}
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #800080;
+    background-color: #4A148C;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* button hover */
+.btn:hover {
+    background-color: #6A1B9A;
+}
 .cards-2-5 {
     display: flex;
 }
