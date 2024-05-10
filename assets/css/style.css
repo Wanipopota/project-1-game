@@ -17,9 +17,10 @@
 /* Body Style */
 body {
     font-family: sans-serif;
-    background-color: #4A148C;
-
+    background-color: #7474b0;
+    background-image: url("./assets/Images/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg");
 }
+
 /* Style header */
 h1, h2 {
     color: #faf3f3;
@@ -48,6 +49,12 @@ h1, h2 {
     background-color: #6A1B9A;
 
 }
+
+.cards-1-5 {
+    display: flex;
+    flex-direction: column;
+}
+
 .cards-2-5 {
     display: flex;
 }
@@ -62,4 +69,14 @@ h1, h2 {
 
 .cards-5-5 {
     display: flex;
+}
+
+.rules-information{
+    position: absolute;
+    left: 5%;
+}
+
+.title:hover{
+    color: antiquewhite;
+
 }
