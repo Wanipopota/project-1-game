@@ -35,19 +35,23 @@ h1, h2 {
 
 /* Buttons */
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
+    /* display: inline-block; */
+    text-align: center;
     color: #800080;
+    display: flex;
+    flex-wrap: wrap;
     background-color: #4A148C;
-    border: none;
+    border: 1px solid black;
     cursor: pointer;
-    transition: margin-right 2s, color 1s;
+    margin: 5px;
+    transition: margin-right 5s, color 1s !important;
 }
 
 /* button hover */
 .btn:hover {
     background-color: #6A1B9A;
-
+    /* transition: margin-right 2s, color 1s !important; */
+    
 }
 
 .cards-1-5 {
@@ -79,4 +83,8 @@ h1, h2 {
 .title:hover{
     color: antiquewhite;
 
+}
+.bannerImage {
+    width: 100%; 
+    height: auto;
 }
