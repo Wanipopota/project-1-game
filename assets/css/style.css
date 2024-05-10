@@ -23,7 +23,7 @@ body {
 
 /* Style header */
 h1, h2 {
-    color: #B5B5B5;
+    color: #faf3f3;
     text-align: center;
 }
 /* Container */
@@ -41,12 +41,13 @@ h1, h2 {
     background-color: #4A148C;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: margin-right 2s, color 1s;
 }
 
 /* button hover */
 .btn:hover {
     background-color: #6A1B9A;
+
 }
 
 .cards-1-5 {
