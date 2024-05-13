@@ -80,11 +80,14 @@ h1, h2 {
     left: 5%;
 }
 
-.title:hover{
-    color: antiquewhite;
-
+.title {
+    color: white;
+  background: linear-gradient(90deg, purple, blue, green, yellow, orange, red);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
-.bannerImage {
-    width: 100%; 
-    height: auto;
+
+.title:hover {
+    color: transparent;
+    transition: 500ms ease;
 }
