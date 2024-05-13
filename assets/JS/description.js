@@ -35,3 +35,25 @@ $(document).ready(function() {
         });
     });
 });
+
+$(document).ready(function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const gameId = urlParams.get('id');
+
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${gameId}`,
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '47274edc1dmshe31d084d77bf6f6p1ea994jsnbebd98eddec2',
+            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+        }
+    };
+
+    $.ajax(settings).done(function(response) {
+        $('#game-title').text(response.title);
+        $('#game-image').attr('src', response.thumbnail);
+        $('#game-description').text(response.description);
+    });
+});
