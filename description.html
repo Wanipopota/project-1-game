@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joke Game Description</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,31 +12,34 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<header> 
-    <section>
-    <nav>
-        <div class="columns is-vcentered">
-            <div class="column">
-                <img src="./assets/Images/logo.png" alt="logo" class="logo" style="width: 75px;"> 
-                <span class="brand-logo center">JOKE GAMES</span>
-            </div>
-            <div class="column is-narrow"> <!-- Uses Bulma to space out the buttons -->
-                <button id="backBtn" class="button is-primary">Back</button>
-            </div>
-            <div class="column is-narrow"> <!-- Uses Bulma to space out the buttons -->
-                <button id="jokeBtn" class="button is-primary">Joke</button>
-            </div>
-        </div>
-    </nav>
-</section>
+<header> <img src="./assets/Images/logo.png" alt="logo" class="logo"> JOKE GAMES 
+    <div>
+        <button id="backBtn">Back</button>
+    </div>
+    <div>
+   <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="jokeBtn">Joke</a>
+   <div id="modal1" class="modal modal-fixed-footer">
+     <div class="modal-content">
+       <h4>Here is your funny joke!</h4>
+       <p id="joke"></p>
+       <p id="jokeSetup"></p>
+       <p id="jokeDelivery"></p>
+     </div>
+     <div class="modal-footer">
+       <a href="#!" id= "likeJoke" class="modal-close waves-effect waves-green btn-flat">Like</a>
+      <a href="#!" id= "dislikeJoke" class="modal-close waves-effect waves-green btn-flat">Dislike</a>
+    </div>
+  </div>
+    </div> 
 </header>
 <body>
     <div id="gameImage" style="text-align: center;">
-        <img src="./assets/Images/logo.png" alt="Description of the image">  
+        <img id="game-image" src="" alt="Description of the image">  
     </div class = "bodyTitles">
     <div>
+        <h1 id="game-title"></h1>  
         <h2 style="text-align: center;">Game Description </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, sed. Vel saepe itaque sequi hic doloremque sit, minus error veritatis? Ex molestias error, deleniti asperiores quo provident dolores eius recusandae!</p>
+            <p id="game-description"></p>
         <h2 style="text-align: center;">Play Here </h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, sed. Vel saepe itaque sequi hic doloremque sit, minus error veritatis? Ex molestias error, deleniti asperiores quo provident dolores eius recusandae!</p>
     </div>
@@ -47,6 +49,7 @@
         <img src="./assets/Images/logo.png" alt="logo" class="logo" style = "width: 75px;"> Made By: Alexander Guinipa, Chase Gilhart, Daniel Berroa, Michael Drag
     </nav>
 </footer>
-<script src="./assets/JS/logic.js"> </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/JS/description.js"> </script>
 </html>
