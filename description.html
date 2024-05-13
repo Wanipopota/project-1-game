@@ -14,17 +14,20 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<header> <img src="./assets/Images/logo.png" alt="logo" class="logo"> JOKE GAMES 
-    <div>
-        <button id="backBtn">Back</button>
-    </div>
-    <div>
-        <button id="jokeBtn">Joke</button>
-          <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><button id="jokeBtn">Joke</button></a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
+<header> 
+    <section>
+    <nav>
+        <div class="columns is-vcentered">
+            <div class="column">
+                <img src="./assets/Images/logo.png" alt="logo" class="logo" style="width: 75px;"> 
+                <span class="brand-logo center">JOKE GAMES</span>
+            </div>
+            <div class="column is-narrow"> <!-- Uses Bulma to space out the buttons -->
+                <button id="backBtn" class="button is-primary">Back</button>
+            </div>
+            <div class="column is-narrow"> <!-- Uses Bulma to space out the buttons -->
+                <button id="jokeBtn" class="button is-primary">Joke</button>
+                <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>Modal Header</h4>
       <p>A bunch of text</p>
@@ -34,6 +37,11 @@
     </div>
   </div>
     </div> 
+            </div>
+        </div>
+    </nav>
+</section>
+
 </header>
 <body>
     <div id="gameImage" style="text-align: center;">
