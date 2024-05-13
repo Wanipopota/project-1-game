@@ -21,6 +21,10 @@ body {
     background-image: url("./assets/Images/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg");
 }
 
+#introduction p {
+    color: white;
+}
+
 /* Style header */
 h1, h2 {
     color: #faf3f3;
