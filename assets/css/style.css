@@ -65,6 +65,8 @@ h1, h2 {
 .cards-1-5 {
     display: flex;
     flex-direction: column;
+    
+    
 }
 
 .cards-2-5 {
@@ -103,12 +105,6 @@ h1, h2 {
     height: 300px;
 }
 
-#bn {
-    border: 5px ;
-    border-color: red;
-    color: red;
-    font-size: large;
-}
 
 footer {
     background-color: #EE6E73;
@@ -119,4 +115,22 @@ footer {
 #footer-logo {
     width: 100px; 
     height: auto;
+
+#card-1, #card-2, #card-3 {
+    width: 65rem;
+}
+
+.card {
+    width: 30rem;
+}
+
+.card-title {
+    color: black !important;
+    font-size: 25px !important;
+    background: white 1px;
+    border: solid;
+    border-color: white;
+    border-top-right-radius: 15px;
+    opacity: 75%;
+
 }
