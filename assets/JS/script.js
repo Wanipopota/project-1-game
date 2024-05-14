@@ -1,41 +1,111 @@
-//Go to description html
-const reviewButton = $(".waves-effect.waves-light.btn-small") 
-reviewButton.on("click", function (event) {
-  event.preventDefault();
-  window.location.href = "description.html";
-});
+/*
+let likeJokeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+let dislikeJokeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+*/
 
+
+//Go to description html
+const reviewButton = $(".waves-effect.waves-light.btn-small")
+reviewButton.on("click", function (event) {
+    event.preventDefault();
+    window.location.href = "description.html";
+});
+let response;
 const requestUrl = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
 const jokeButton = $("#jokeBtn");
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('.modal').modal();
+    const likeJoke = $("#like-Joke");
+    const dislikeJoke = $("#dislike-Joke");
 
-    jokeButton.on("click", function(event) {
-        event.preventDefault();
 
-        $.ajax({
-            url: requestUrl,
-            method: 'GET',
-        }).then(function(response) {
-            console.log(response);
+    likeJoke.on("click", function (event) {
+        let likeJokeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        if (response.type == "single") {
+            console.log(response.joke);
+            likeJokeArray.push(response.joke);
+            saveLikedJokes(likeJokeArray);
+        }
+        else {
+            console.log(response.setup);
+            console.log(response.delivery);
+            likeJokeArray.push({
+                setup: response.setup,
+                delivery: response.delivery
+            });
+            saveLikedJokes(likeJokeArray);
+        }
+    })
 
-            if (response.type == "single") {
-                $('#jokeSetup').empty();
-                $('#jokeDelivery').empty();
-                $('#joke').text(response.joke);
-            } else if (response.type == "twopart") {
-                $('#joke').html('');
-                $('#jokeSetup').text(response.setup);
-                $('#jokeDelivery').text(response.delivery);
-            } else {
-                console.log("Unexpected joke type: " + response.type);
-            }
-        });
+    dislikeJoke.on("click", function (event) {
+        let dislikeJokeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        if (response.type == "single") {
+            console.log(response.joke);
+            dislikeJokeArray.push(response.joke);
+            saveDislikedJokes(dislikeJokeArray);
+        }
+        else {
+            console.log(response.setup);
+            console.log(response.delivery);
+            dislikeJokeArray.push({
+                setup: response.setup,
+                delivery: response.delivery
+            });
+            saveDislikedJokes(dislikeJokeArray);
+        }
+    })
+});
+
+jokeButton.on("click", function (event) {
+    event.preventDefault();
+
+    $.ajax({
+        url: requestUrl,
+        method: 'GET',
+    }).then(function (r) {
+        console.log(response);
+
+        if (r.type == "single") {
+            $('#jokeSetup').empty();
+            $('#jokeDelivery').empty();
+            $('#joke').text(r.joke);
+        } else if (r.type == "twopart") {
+            $('#joke').html('');
+            $('#jokeSetup').text(r.setup);
+            $('#jokeDelivery').text(r.delivery);
+        } else {
+            console.log("Unexpected joke type: " + r.type);
+        }
+        response = r
+
     });
 });
 
-$(document).ready(function() {
+function saveLikedJokes(likeJokeArray) {
+    localStorage.setItem("Liked", JSON.stringify(likeJokeArray));
+}
+
+function saveDislikedJokes(dislikeJokeArray) {
+    localStorage.setItem("Disliked", JSON.stringify(dislikeJokeArray));
+}
+
+/* 
+const likeJoke = $("#like-Joke");
+const dislikeJoke = $("#dislike-Joke");
+
+likeJoke.on("click", function(event) {
+    if (response.type == "single") {
+        console.log(response.joke);
+    }
+    else if (response.type == "twopart") {
+        console.log(response.setup);
+    }
+
+}) 
+*/
+
+$(document).ready(function () {
     const settings = {
         async: true,
         crossDomain: true,
@@ -47,11 +117,11 @@ $(document).ready(function() {
         }
     };
 
-    $.ajax(settings).done(function(response) {
+    $.ajax(settings).done(function (response) {
         const games = response.slice(0, 15); // Get the first 15 games from the response
 
         // Loop through each game and populate the game cards
-        games.forEach(function(game, index) {
+        games.forEach(function (game, index) {
             const cardContainer = $(`#card-${index + 1}`); // Get card container by ID
 
             if (cardContainer.length > 0) {
@@ -72,11 +142,11 @@ $(document).ready(function() {
                 }
 
                 // Add click event listener to each game card
-                cardContainer.on('click', function() {
+                cardContainer.on('click', function () {
                     const gameId = game.id;
                     window.location.href = `description.html?id=${gameId}`;
                 });
             }
         });
     });
-});
+})
