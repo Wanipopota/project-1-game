@@ -52,8 +52,27 @@ $(document).ready(function() {
     };
 
     $.ajax(settings).done(function(response) {
+        console.log(response)
         $('#game-title').text(response.title);
         $('#game-image').attr('src', response.thumbnail);
         $('#game-description').text(response.description);
+        $('#game-link').attr('href',response.game_url).text(response.game_url)
+        $('#graphics').text(response.minimum_system_requirements.graphics)
+        $('#memory').text(response.minimum_system_requirements.memory)
+        $('#os').text(response.minimum_system_requirements.os)
+        $('#processor').text(response.minimum_system_requirements.processor)
+        $('#storage').text(response.minimum_system_requirements.storage)
+
+    if (response && response.screenshots) {
+        const infoArray = response.screenshots;
+        console.log(infoArray);
+
+        infoArray.forEach(function(item) {
+        console.log(item);
+            });
+        for (let i=0;i<infoArray.length; i++){
+        $(`#image-${i+1}`).attr('src', `${infoArray[i].image}`)
+        }
+        }
     });
 });
