@@ -1,14 +1,3 @@
-/*
-let likeJokeArray = JSON.parse(localStorage.getItem("Liked")) || [];
-let dislikeJokeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
-*/
-
-let i = 0;
-let txt = "";
-const speed = 150;
-
-
-//Go to description html
 const reviewButton = $(".waves-effect.waves-light.btn-small")
 reviewButton.on("click", function (event) {
     event.preventDefault();
@@ -17,13 +6,10 @@ reviewButton.on("click", function (event) {
 let response;
 const requestUrl = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
 const jokeButton = $("#jokeBtn");
-
 $(document).ready(function () {
     $('.modal').modal();
     const likeJoke = $("#like-Joke");
     const dislikeJoke = $("#dislike-Joke");
-
-
     likeJoke.on("click", function (event) {
         let likeJokeArray = JSON.parse(localStorage.getItem("Liked")) || [];
         if (response.type == "single") {
@@ -48,7 +34,6 @@ $(document).ready(function () {
             $("#liked-1").append(likedJokeTable2);
         }
     })
-
     dislikeJoke.on("click", function (event) {
         let dislikeJokeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
         if (response.type == "single") {
@@ -73,16 +58,13 @@ $(document).ready(function () {
         }
     })
 });
-
 jokeButton.on("click", function (event) {
     event.preventDefault();
-
     $.ajax({
         url: requestUrl,
         method: 'GET',
     }).then(function (r) {
         console.log(response);
-
         if (r.type == "single") {
             $('#jokeSetup').empty();
             $('#jokeDelivery').empty();
@@ -95,33 +77,14 @@ jokeButton.on("click", function (event) {
             console.log("Unexpected joke type: " + r.type);
         }
         response = r
-
     });
 });
-
 function saveLikedJokes(likeJokeArray) {
     localStorage.setItem("Liked", JSON.stringify(likeJokeArray));
 }
-
 function saveDislikedJokes(dislikeJokeArray) {
     localStorage.setItem("Disliked", JSON.stringify(dislikeJokeArray));
 }
-
-/* 
-const likeJoke = $("#like-Joke");
-const dislikeJoke = $("#dislike-Joke");
-
-likeJoke.on("click", function(event) {
-    if (response.type == "single") {
-        console.log(response.joke);
-    }
-    else if (response.type == "twopart") {
-        console.log(response.setup);
-    }
-
-}) 
-*/
-
 $(document).ready(function () {
     const settings = {
         async: true,
@@ -133,23 +96,17 @@ $(document).ready(function () {
             'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
         }
     };
-
     $.ajax(settings).done(function (response) {
-        const games = response.slice(0, 15); // Get the first 15 games from the response
-
-        // Loop through each game and populate the game cards
+        const games = response.slice(0, 15);
         games.forEach(function (game, index) {
-            const cardContainer = $(`#card-${index + 1}`); // Get card container by ID
-
+            const cardContainer = $(`#card-${index + 1}`); 
             if (cardContainer.length > 0) {
                 const cardImage = cardContainer.find('.card-image img');
                 const cardTitle = cardContainer.find('.card-title');
                 const cardDescr = cardContainer.find('.card-content');
-
-                // Populate card elements with game information
                 if (cardImage.length > 0) {
-                    cardImage.attr('src', game.thumbnail); // Set image source
-                    cardImage.attr('alt', game.title); // Set image alt text
+                    cardImage.attr('src', game.thumbnail); 
+                    cardImage.attr('alt', game.title); 
                 }
                 if (cardTitle.length > 0) {
                     cardTitle.text(game.title);
@@ -157,8 +114,6 @@ $(document).ready(function () {
                 if (cardDescr.length > 0) {
                     cardDescr.text(`${game.short_description}`);
                 }
-
-                // Add click event listener to each game card
                 cardContainer.on('click', function () {
                     const gameId = game.id;
                     window.location.href = `description.html?id=${gameId}`;
@@ -168,12 +123,9 @@ $(document).ready(function () {
     });
 })
 
-
-
-
-
-
-
+/*let i = 0;
+let txt = "";
+const speed = 150; */
 
 /* this works but might want to apply to the module section
 
@@ -184,7 +136,6 @@ applied this to line 34 and it worked
             i=0;
             typeWriter();
 
-
 function typeWriter() {
   if (i < txt.length) {
     document.getElementById('liked-1').innerHTML += txt.charAt(i);
@@ -192,10 +143,7 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
-
 HTML to call a function inside the HTML
-
                 <button onclick="typeWriter()">Click me</button>
                 <p id="demo"></p>
-
 */

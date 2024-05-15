@@ -1,4 +1,3 @@
-//Back button to go Index
 const closeButton = $("#backBtn") 
 closeButton.on("click", function (event) {
   event.preventDefault();
@@ -6,6 +5,7 @@ closeButton.on("click", function (event) {
 });
 
 let response;
+
 const requestUrl = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
 const jokeButton = $("#jokeBtn");
 
