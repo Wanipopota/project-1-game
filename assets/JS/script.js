@@ -1,15 +1,9 @@
-/*
-let likeJokeArray = JSON.parse(localStorage.getItem("Liked")) || [];
-let dislikeJokeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
-*/
-
-
-//Go to description html
 const reviewButton = $(".waves-effect.waves-light.btn-small")
 reviewButton.on("click", function (event) {
     event.preventDefault();
     window.location.href = "description.html";
 });
+
 let response;
 const requestUrl = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
 const jokeButton = $("#jokeBtn");
@@ -102,21 +96,6 @@ function saveDislikedJokes(dislikeJokeArray) {
     localStorage.setItem("Disliked", JSON.stringify(dislikeJokeArray));
 }
 
-/* 
-const likeJoke = $("#like-Joke");
-const dislikeJoke = $("#dislike-Joke");
-
-likeJoke.on("click", function(event) {
-    if (response.type == "single") {
-        console.log(response.joke);
-    }
-    else if (response.type == "twopart") {
-        console.log(response.setup);
-    }
-
-}) 
-*/
-
 $(document).ready(function () {
     const settings = {
         async: true,
@@ -130,21 +109,19 @@ $(document).ready(function () {
     };
 
     $.ajax(settings).done(function (response) {
-        const games = response.slice(0, 15); // Get the first 15 games from the response
+        const games = response.slice(0, 15);
 
-        // Loop through each game and populate the game cards
         games.forEach(function (game, index) {
-            const cardContainer = $(`#card-${index + 1}`); // Get card container by ID
+            const cardContainer = $(`#card-${index + 1}`); 
 
             if (cardContainer.length > 0) {
                 const cardImage = cardContainer.find('.card-image img');
                 const cardTitle = cardContainer.find('.card-title');
                 const cardDescr = cardContainer.find('.card-content');
 
-                // Populate card elements with game information
                 if (cardImage.length > 0) {
-                    cardImage.attr('src', game.thumbnail); // Set image source
-                    cardImage.attr('alt', game.title); // Set image alt text
+                    cardImage.attr('src', game.thumbnail); 
+                    cardImage.attr('alt', game.title); 
                 }
                 if (cardTitle.length > 0) {
                     cardTitle.text(game.title);
@@ -153,7 +130,6 @@ $(document).ready(function () {
                     cardDescr.text(`${game.short_description}`);
                 }
 
-                // Add click event listener to each game card
                 cardContainer.on('click', function () {
                     const gameId = game.id;
                     window.location.href = `description.html?id=${gameId}`;

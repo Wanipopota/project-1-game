@@ -13,12 +13,17 @@
 </head>
 
 <header> 
-
-        <img src="./assets/Images/logo.png" alt="logo" class="logo"> 
-    
-    <div>
+  <nav>
+    <div class="nav-wrapper">
+      <img src="./assets/Images/logo.png" alt="logo" class="logo" style="width: 75px; margin-top: 5px;" > 
+      <div>
         <button id="backBtn">Back</button>
+      </div>
+      <div>
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="jokeBtn">Joke</a>
+      </div>
     </div>
+  </nav>
     <div>
    <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="jokeBtn">Click For Joke</a> 
    <div id="modal1" class="modal modal-fixed-footer">
@@ -31,11 +36,10 @@
      <div class="modal-footer">
        <a href="#!" id= "like-Joke" class="modal-close waves-effect waves-green btn-flat">Like</a>
       <a href="#!" id= "dislike-Joke" class="modal-close waves-effect waves-green btn-flat">Dislike</a>
-    </div>
+      </div>
   </div>
-
-    </div> 
 </header>
+
 <body>
     <div id="gameImage" style="text-align: center;">
         <img id="game-image" src="" alt="Description of the image">  
@@ -47,10 +51,11 @@
         <p id="game-description"></p>
         </div>
         <h2 style="text-align: center;">Play Here </h2>
+
         <a href="https://www.freetogame.com/open/overwatch-2" target="_blank">
           <button id="myButton" class="buttonClass" type="button">Click Me to Play!</button>
-      </a>
-            <a id="game-link"> </a>
+        </a>
+        <a id="game-link"> </a>
             <h2>Minimum system requirements</h2>
         <ul id="msr-list">
             <li id="graphics"></li>
@@ -70,10 +75,9 @@
 </body>
 <footer>
     <nav>
-        <img src="./assets/Images/logo.png" alt="logo" class="logo" style = "width: 55px;"> Made By: Alexander Guinipa, Chase Gilhart, Daniel Berroa, Michael Drag
+      <img src="./assets/Images/logo.png" alt="logo" class="logo" style="width: 75px; margin-top: 5px;"> Made By: Alexander Guanipa, Chase Gilhart, Daniel Berroa, Michael Drag
     </nav>
 </footer>
-
 <section>
   <div id="jokes-table">
     <h2>The Joke Corner</h2>
@@ -95,7 +99,6 @@
     </div>
   </div>
 </section>
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/JS/description.js"> </script>
