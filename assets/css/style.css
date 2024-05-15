@@ -1,11 +1,8 @@
-/* Margin & Padding */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Font information */
 .open-sans-body {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -13,33 +10,25 @@
     font-style: normal;
     font-variation-settings: "wdth 100";
 }
-
 nav{
     background:#6648a4;
 }
-
-/* Body Style */
 body {
     font-family: sans-serif;  
     background: url(./assets/Images/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg) left bottom no-repeat, linear-gradient(to bottom,#727cff, #4d0f8c);
 }
-
 #introduction p {
     color: white;
 }
-
-
 h1, h2 {
     color: #faf3f3;
     text-align: center;
 }
-
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
-
 .btn {
     flex-wrap: wrap;
     background-color: #4A148C;
@@ -48,18 +37,13 @@ h1, h2 {
     margin: 5px;
     transition: margin-right 5s, color 1s !important;
 }
-
 .style {
     font-size: 20px; 
     font-weight: bold
 }
-
 .btn:hover {
     background-color: #6A1B9A;
-    /* transition: margin-right 2s, color 1s !important; */
-    
 }
-
 .cards-1-5 {
     display: flex;
     flex-direction: column;
@@ -92,10 +76,12 @@ h1, h2 {
   -webkit-background-clip: text;
   background-clip: text;
 }
+
 .title:hover {
     color: transparent;
     transition: 500ms ease;
 }
+
 .bannerImage {
     width: 100%; 
     height: 300px;
@@ -118,8 +104,8 @@ h1, h2 {
     border-color: white;
     border-top-right-radius: 15px;
     opacity: 75%;
-
 }
+
 footer {
     background-color: #6648a4;
     text-align: left;
