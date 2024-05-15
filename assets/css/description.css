@@ -43,7 +43,7 @@ h1, h2 {
     text-align: center;
     color: #800080;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     background-color: #4A148C;
     border: 1px solid black;
     cursor: pointer;
@@ -108,10 +108,9 @@ h1, h2 {
    top: .1%;
    right: 1%;
     width: 7%;
-  
-   
     
 }
+
 #backBtn{
 position: absolute;
 top: 10%;

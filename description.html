@@ -13,15 +13,18 @@
 </head>
 
 <header> 
-
-        <img src="./assets/Images/logo.png" alt="logo" class="logo"> 
-    
-    <div>
+  <nav>
+    <div class="nav-wrapper">
+      <img src="./assets/Images/logo.png" alt="logo" class="logo" style="width: 75px; margin-top: 5px;" > 
+      <div>
         <button id="backBtn">Back</button>
+      </div>
+      <div>
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="jokeBtn">Joke</a>
+      </div>
     </div>
-    <div>
-   <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="jokeBtn">Joke</a>
-   <div id="modal1" class="modal modal-fixed-footer">
+  </nav>
+  <div id="modal1" class="modal modal-fixed-footer">
      <div class="modal-content">
        <h4>Here is your funny joke!</h4>
        <p id="joke"></p>
@@ -31,11 +34,10 @@
      <div class="modal-footer">
        <a href="#!" id= "like-Joke" class="modal-close waves-effect waves-green btn-flat">Like</a>
       <a href="#!" id= "dislike-Joke" class="modal-close waves-effect waves-green btn-flat">Dislike</a>
-    </div>
+      </div>
   </div>
-
-    </div> 
 </header>
+
 <body>
     <div id="gameImage" style="text-align: center;">
         <img id="game-image" src="" alt="Description of the image">  
@@ -45,7 +47,7 @@
         <h2 style="text-align: center;">Game Description </h2>
             <p id="game-description"></p>
         <h2 style="text-align: center;">Play Here </h2>
-            <a id="game-link"> </a>
+            <a id="game-link"></a>
             <h2>Minimum system requirements</h2>
         <ul id="msr-list">
             <li id="graphics"></li>
@@ -65,7 +67,7 @@
 </body>
 <footer>
     <nav>
-        <img src="./assets/Images/logo.png" alt="logo" class="logo" style = "width: 75px;"> Made By: Alexander Guinipa, Chase Gilhart, Daniel Berroa, Michael Drag
+        <img src="./assets/Images/logo.png" alt="logo" class="logo" style="width: 75px; margin-top: 5px;"> Made By: Alexander Guanipa, Chase Gilhart, Daniel Berroa, Michael Drag
     </nav>
 </footer>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
