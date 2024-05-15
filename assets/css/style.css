@@ -96,10 +96,12 @@ h1, h2 {
   -webkit-background-clip: text;
   background-clip: text;
 }
+
 .title:hover {
     color: transparent;
     transition: 500ms ease;
 }
+
 .bannerImage {
     width: 100%; 
     height: 300px;
@@ -115,6 +117,7 @@ footer {
 #footer-logo {
     width: 100px; 
     height: auto;
+}
 
 #card-1, #card-2, #card-3 {
     width: 65rem;
@@ -132,5 +135,4 @@ footer {
     border-color: white;
     border-top-right-radius: 15px;
     opacity: 75%;
-
 }
