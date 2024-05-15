@@ -33,7 +33,7 @@ $(document).ready(function () {
                 delivery: response.delivery
             });
             saveLikedJokes(likeJokeArray);
-            let likedJokeTable2 = $("<li>").text(response.setup + '  .........' + response.delivery);
+            let likedJokeTable2 = $("<li>").text(response.setup + '  . . . ' + response.delivery);
             $("#liked-1").empty().append;
             $("#liked-1").append(likedJokeTable2);
         }
@@ -57,7 +57,7 @@ $(document).ready(function () {
                 delivery: response.delivery
             });
             saveDislikedJokes(dislikeJokeArray);
-            let dislikedJokeTable2 = $("<li>").text(response.setup + '  .........' + response.delivery);
+            let dislikedJokeTable2 = $("<li>").text(response.setup + '  . . . ' + response.delivery);
             $("#disliked-1").empty().append;
             $("#disliked-1").append(dislikedJokeTable2);
         }

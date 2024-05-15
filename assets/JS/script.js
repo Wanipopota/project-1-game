@@ -3,6 +3,10 @@ let likeJokeArray = JSON.parse(localStorage.getItem("Liked")) || [];
 let dislikeJokeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
 */
 
+let i = 0;
+let txt = "";
+const speed = 150;
+
 
 //Go to description html
 const reviewButton = $(".waves-effect.waves-light.btn-small")
@@ -29,6 +33,7 @@ $(document).ready(function () {
             let likedJokeTable1 = $("<li>").text(response.joke);
             $("#liked-1").empty().append;
             $("#liked-1").append(likedJokeTable1);
+            
         }
         else {
             console.log(response.setup);
@@ -38,7 +43,7 @@ $(document).ready(function () {
                 delivery: response.delivery
             });
             saveLikedJokes(likeJokeArray);
-            let likedJokeTable2 = $("<li>").text(response.setup + '  .........' + response.delivery);
+            let likedJokeTable2 = $("<li>").text(response.setup + '  . . . ' + response.delivery);
             $("#liked-1").empty().append;
             $("#liked-1").append(likedJokeTable2);
         }
@@ -62,7 +67,7 @@ $(document).ready(function () {
                 delivery: response.delivery
             });
             saveDislikedJokes(dislikeJokeArray);
-            let dislikedJokeTable2 = $("<li>").text(response.setup + '  .........' + response.delivery);
+            let dislikedJokeTable2 = $("<li>").text(response.setup + '  . . . ' + response.delivery);
             $("#disliked-1").empty().append;
             $("#disliked-1").append(dislikedJokeTable2);
         }
@@ -162,3 +167,35 @@ $(document).ready(function () {
         });
     });
 })
+
+
+
+
+
+
+
+
+/* this works but might want to apply to the module section
+
+applied this to line 34 and it worked
+
+            $("#liked-1").empty();
+            txt= response.joke;
+            i=0;
+            typeWriter();
+
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById('liked-1').innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+HTML to call a function inside the HTML
+
+                <button onclick="typeWriter()">Click me</button>
+                <p id="demo"></p>
+
+*/
