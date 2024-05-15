@@ -26,6 +26,9 @@ $(document).ready(function () {
             console.log(response.joke);
             likeJokeArray.push(response.joke);
             saveLikedJokes(likeJokeArray);
+            let likedJokeTable1 = $("<li>").text(response.joke);
+            $("#liked-1").empty().append;
+            $("#liked-1").append(likedJokeTable1);
         }
         else {
             console.log(response.setup);
@@ -35,6 +38,9 @@ $(document).ready(function () {
                 delivery: response.delivery
             });
             saveLikedJokes(likeJokeArray);
+            let likedJokeTable2 = $("<li>").text(response.setup + '  .........' + response.delivery);
+            $("#liked-1").empty().append;
+            $("#liked-1").append(likedJokeTable2);
         }
     })
 
@@ -44,6 +50,9 @@ $(document).ready(function () {
             console.log(response.joke);
             dislikeJokeArray.push(response.joke);
             saveDislikedJokes(dislikeJokeArray);
+            let dislikedJokeTable1 = $("<li>").text(response.joke);
+            $("#disliked-1").empty().append;
+            $("#disliked-1").append(dislikedJokeTable1);
         }
         else {
             console.log(response.setup);
@@ -53,6 +62,9 @@ $(document).ready(function () {
                 delivery: response.delivery
             });
             saveDislikedJokes(dislikeJokeArray);
+            let dislikedJokeTable2 = $("<li>").text(response.setup + '  .........' + response.delivery);
+            $("#disliked-1").empty().append;
+            $("#disliked-1").append(dislikedJokeTable2);
         }
     })
 });
