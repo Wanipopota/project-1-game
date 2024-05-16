@@ -1,3 +1,7 @@
+let i = 0;
+let txt = "";
+const speed = 50;
+
 const closeButton = $("#backBtn") 
 closeButton.on("click", function (event) {
   event.preventDefault();
@@ -77,10 +81,23 @@ jokeButton.on("click", function (event) {
             $('#jokeSetup').empty();
             $('#jokeDelivery').empty();
             $('#joke').text(r.joke);
+            $('#joke').empty();
+            txt= r.joke;
+            i=0;
+            typeWriter();
+            setTimeout(timeOut, 10000);
+            document.getElementById('timeOutMessage').innerHTML = ""
         } else if (r.type == "twopart") {
             $('#joke').html('');
             $('#jokeSetup').text(r.setup);
             $('#jokeDelivery').text(r.delivery);
+            $('#jokeSetup').empty();
+            $('#jokeDelivery').empty();
+            txt = (r.setup + '.....' + r.delivery);
+            i=0;
+            typeWriter();
+            setTimeout(timeOut, 10000);
+            document.getElementById('timeOutMessage').innerHTML = ""
         } else {
             console.log("Unexpected joke type: " + r.type);
         }
@@ -137,3 +154,19 @@ $(document).ready(function() {
         }
     });
 });
+
+function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById('joke').innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+//const myTimeout = setTimeout(timeOut, 1000);
+
+
+function timeOut() {
+  document.getElementById('timeOutMessage').innerHTML = "Did you die of laughter?"
+
+}
