@@ -12,32 +12,42 @@
     <link rel="stylesheet" href="./assets/css/description.css">
 </head>
 
-<header> 
-  <nav>
-    <div class="nav-wrapper">
-      <img src="./assets/Images/logo.png" alt="logo" class="logo" style="width: 75px; margin-top: 5px;" > 
-      <div>
-        <button id="backBtn">Back</button>
+<header>
+  <section id="navbar-top">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="https://github.com/Wanipopota/project-1-game" target="_">
+          <img src="./assets/Images/logo.png" alt="Avatar" style="width: 75px; margin-top: 5px;" />
+        </a>
+        <a href="./index.html" class="brand-logo center">Joke Games</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a class="waves-effect waves-light btn modal-trigger white-text" id="backBtn">Back</a></li>
+          <li><a class="waves-effect waves-light btn modal-trigger white-text" href="#modal1" id="jokeBtn">Click for Joke</a></li>
+        </ul>
       </div>
-      <div>
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="jokeBtn">Joke</a>
+    </nav>
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Here is your funny joke!</h4>
+        <p id="joke"></p>
+        <p id="jokeSetup"></p>
+        <p id="jokeDelivery"></p>
+      </div>
+      <div class="modal-footer">
+        <button id="like-Joke" class="modal-close waves-effect waves-green btn-flat">Like</button>
+        <button id="dislike-Joke" class="modal-close waves-effect waves-green btn-flat">Dislike</button>
       </div>
     </div>
-  </nav>
-    <div>
-   <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="jokeBtn">Click For Joke</a> 
-   <div id="modal1" class="modal modal-fixed-footer">
-     <div class="modal-content">
-       <h4>Here is your funny joke!</h4>
-       <p id="joke"></p>
-       <p id="jokeSetup"></p>
-       <p id="jokeDelivery"></p>
-     </div>
-     <div class="modal-footer">
-       <a href="#!" id= "like-Joke" class="modal-close waves-effect waves-green btn-flat">Like</a>
-      <a href="#!" id= "dislike-Joke" class="modal-close waves-effect waves-green btn-flat">Dislike</a>
-      </div>
-  </div>
+    </div>
+  </section>
+</header>
+
+<section id="introduction">
+  <div class="rules-information">
+    <h1 class="title">Welcome to our Gaming Website!</h1>
+    <img src="./assets/Images/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg" alt="image" class="bannerImage" />
+  </div> 
+</section>
 </header>
 
 <body>
@@ -47,16 +57,16 @@
     <div>
         <h1 id="game-title"></h1>  
         <h2 style="text-align: center;">Game Description </h2>
-        <div    
+        <div id="game-descp-box">    
         <p id="game-description"></p>
         </div>
         <h2 style="text-align: center;">Play Here </h2>
 
         <a href="https://www.freetogame.com/open/overwatch-2" target="_blank">
-          <button id="myButton" class="buttonClass" type="button">Click Me to Play!</button>
+          <button id="myButton" class="waves-effect waves-light btn modal-trigger white-text" type="button">Click Me to Play!</button>
         </a>
         <a id="game-link"> </a>
-            <h2>Minimum system requirements</h2>
+            <h2>Minimum System Requirements</h2>
         <ul id="msr-list">
             <li id="graphics"></li>
             <li id="memory"></li>
@@ -73,32 +83,48 @@
         </ul>
     </div>
 </body>
-<footer>
-    <nav>
-      <img src="./assets/Images/logo.png" alt="logo" class="logo" style="width: 75px; margin-top: 5px;"> Made By: Alexander Guanipa, Chase Gilhart, Daniel Berroa, Michael Drag
-    </nav>
-</footer>
 <section>
   <div id="jokes-table">
     <h2>The Joke Corner</h2>
+    <div id="both-cards">
     <div id="liked">
-      <h4>
-      Liked Jokes
-      </h4>
-      <ul>
-        <li id="liked-1"></li>
-      </ul>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h4>
+              Liked Jokes
+            </h4>
+          </div>
+          <div class="flip-card-back">
+            <ul>
+              <li id="liked-1">Like a joke to see!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="disliked">
-      <h4>
-        Disliked Jokes
-      </h4>
-      <ul>
-        <li id="disliked-1"></li>
-      </ul>
-    </div>
-  </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h4>
+              Disliked Jokes
+            </h4>
+          </div>
+          <div class="flip-card-back">
+            <ul>
+              <li id="disliked-1">Dislike a joke to see!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 </section>
+<footer>
+  <img src="./assets/Images/logo.png" alt="logo" class="bottom-img" style = "width: 75px; margin-top: 5px;">
+  <h5 class="bottom">Thank You For Your Support!</h5>
+  <h6 class="bottom">Made By: Alexander Guanipa, Chase Gilhart, Daniel Berroa, Michael Drag.</h6> 
+  <h6 class="bottom"> UM Bootcamp 2024</h6>
+</footer>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/JS/description.js"> </script>

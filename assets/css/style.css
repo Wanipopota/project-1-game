@@ -24,6 +24,15 @@ h1, h2 {
     color: #faf3f3;
     text-align: center;
 }
+h1 {
+
+}
+h3{
+    color: #faf3f3; 
+}
+h4 {
+    margin:auto !important;
+}
 .container {
     width: 80%;
     margin: auto;
@@ -66,15 +75,19 @@ h1, h2 {
 }
 
 .rules-information{
-    position: absolute;
-    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+#rules {
+    color: #ffffff;
+}
 .title {
     color: white;
   background: linear-gradient(90deg, purple, blue, green, yellow, orange, red);
   -webkit-background-clip: text;
   background-clip: text;
+  position: absolute;
 }
 
 .title:hover {
@@ -117,16 +130,14 @@ footer {
     justify-content: center;
 }
 #jokes-table {
-    border: black 10px solid;
     margin: 50px;
 }
-#jokes-table h2 {
-}
+
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
+    width: 400px;
+    height: 300px;
+    border: 1px solid #000000;
     perspective: 1000px; 
     display: flex;
   }
@@ -147,13 +158,16 @@ footer {
     height: 100%;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .flip-card-front {
-    background-color: #bbb;
+    background-color: #ffffff;
     color: black;
   }
   .flip-card-back {
-    background-color: #ee6e73;
+    background-color: #6648a4;
     color: white;
     transform: rotateY(180deg);
     font-size: 15px;
@@ -161,10 +175,14 @@ footer {
   #both-cards {
     display: flex;
     justify-content: space-evenly;
-    margin: 15px;
+    text-align: center;
+
   }
   #liked-1, #disliked-1 {
-    margin: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
   }
 .bottom-img {
     float: left;
