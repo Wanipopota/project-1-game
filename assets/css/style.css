@@ -59,15 +59,19 @@ h4 {
 }
 .cards-2-5 {
     display: flex;
+    flex-wrap: wrap;
 }
 .cards-3-5 {
     display: flex;
+    flex-wrap: wrap;
 }
 .cards-4-5 {
     display: flex;
+    flex-wrap: wrap;
 }
 .cards-5-5 {
     display: flex;
+    flex-wrap: wrap;
 }
 .rules-information{
     display: flex;
