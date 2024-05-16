@@ -135,11 +135,11 @@ $(document).ready(function() {
         $('#game-image').attr('src', response.thumbnail);
         $('#game-description').text(response.description);
         $('#game-link').attr('href',response.game_url).text(response.game_url)
-        $('#graphics').text(response.minimum_system_requirements.graphics)
-        $('#memory').text(response.minimum_system_requirements.memory)
-        $('#os').text(response.minimum_system_requirements.os)
-        $('#processor').text(response.minimum_system_requirements.processor)
-        $('#storage').text(response.minimum_system_requirements.storage)
+        $('#graphics').text('Graphics: ' + response.minimum_system_requirements.graphics)
+        $('#memory').text('Memory: ' + response.minimum_system_requirements.memory)
+        $('#os').text('OS: ' + response.minimum_system_requirements.os)
+        $('#processor').text('Processor: ' + response.minimum_system_requirements.processor)
+        $('#storage').text('Min. Storage: ' + response.minimum_system_requirements.storage)
 
     if (response && response.screenshots) {
         const infoArray = response.screenshots;

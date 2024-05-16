@@ -11,12 +11,14 @@
     font-variation-settings: "wdth 100";
 }
 body {
-    font-family: sans-serif;
-    background-color: #7474b0;
-    background-image: url("./assets/Images/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg");
-}
+    font-family: sans-serif;  
+    background: url(./assets/Images/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg) left bottom no-repeat, linear-gradient(to bottom,#727cff, #4d0f8c);
+    }
 #introduction p {
     color: white;
+}
+nav {
+    background: #6648a4;
 }
 h1, h2 {
     color: #faf3f3;
@@ -29,9 +31,6 @@ h1, h2 {
 }
 .btn {
     text-align: center;
-    color: #800080;
-    display: flex;
-    flex-wrap: nowrap;
     background-color: #4A148C;
     border: 1px solid black;
     cursor: pointer;
@@ -41,12 +40,8 @@ h1, h2 {
 .btn:hover {
     background-color: #6A1B9A;
 }
-.cards-1-5 {
-    display: flex;
-    flex-direction: column;
-}
-.cards-2-5 {
-    display: flex;
+#game-descp-box{
+    margin: 50px;
 }
 #game-description {
     background-color: white;
@@ -61,15 +56,16 @@ h1, h2 {
 }
 #myButton {
     display:block;
-    width: 150px;
+    width: auto;
     margin:auto;
-    background-color: green;
+    
 }
 #msr-list {
     width: 50%;
     margin: auto;
     text-align: center;
     font-weight: bolder;
+    font-size: 30px;
 }
 #image-1 {
     width: 60%;
@@ -95,50 +91,108 @@ h1, h2 {
     display: block;
     margin-bottom: 20px;
 }
-.cards-3-5 {
-    display: flex;
-}
-.cards-4-5 {
-    display: flex;
-}
-.cards-5-5 {
-    display: flex;
+#image-4 {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    border: 1px solid black;
+    display: block;
+    margin-bottom: 20px;
 }
 .rules-information {
-    position: absolute;
-    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .title {
     color: white;
   background: linear-gradient(90deg, purple, blue, green, yellow, orange, red);
   -webkit-background-clip: text;
   background-clip: text;
+  position: absolute;
 }
 .title:hover {
     color: transparent;
     transition: 500ms ease;
 }
 .bannerImage {
-    width: 100%; 
-    height: auto;
+    width: 100%;
+    height: 300px;
 }
 .logo {
     width: 10%;
     margin-top: 1%;
 }
- #jokeBtn {
-   position: absolute;
-   top: .1%;
-}
-#backBtn {
-position: absolute;
-top: 10%;
-right: 1.2%;
-width: 7%
-}
+
 #game-image {
-    width:60%;
+    margin: 20px;
+    width: 60rem;
 }
-.footer-nav {
-    width: 60;
+footer {
+    background-color: #6648a4;
+    text-align: left;
+    padding: 5px;
+    color: white;
 }
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+.bottom-img {
+    float: left;
+}
+#jokes-table {
+    margin: 50px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 300px;
+    border: 1px solid #000000;
+    perspective: 1000px; 
+    display: flex;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flip-card-front {
+    background-color: #ffffff;
+    color: black;
+  }
+  .flip-card-back {
+    background-color: #6648a4;
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 15px;
+  }
+  #both-cards {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+
+  }
+  #liked-1, #disliked-1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 25px;
+  }
