@@ -71,7 +71,7 @@ We have created a web app called Joke Games. It is a website that displays lists
 <img width="1617" alt="Screenshot 2024-05-16 at 11 21 32 AM" src="https://github.com/Wanipopota/project-1-game/assets/164225533/ccbea055-1bab-4a9a-9998-c2c37ea806c7">
 
 
-Link to project: LINK PROJECT HERE
+Link to project: (https://wanipopota.github.io/project-1-game/)
 
 
 How It's Made:
