@@ -56,14 +56,14 @@ h1, h2 {
     border: 1px solid black;
     border-radius: 15px;
 }
-#game-link {
-    display: none;
+#button-box {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; 
 }
-#myButton {
-    display:block;
-    width: auto;
-    margin:auto;
-    
+#game-link{
+    color: #ffffff;
 }
 #msr-list {
     width: 50%;
