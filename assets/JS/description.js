@@ -134,7 +134,7 @@ $(document).ready(function() {
         $('#game-title').text(response.title);
         $('#game-image').attr('src', response.thumbnail);
         $('#game-description').text(response.description);
-        $('#game-link').attr('href',response.game_url).text(response.game_url)
+        $('#game-link').attr('href',response.game_url).text('Click Me to Play!')
         $('#graphics').text('Graphics: ' + response.minimum_system_requirements.graphics)
         $('#memory').text('Memory: ' + response.minimum_system_requirements.memory)
         $('#os').text('OS: ' + response.minimum_system_requirements.os)
