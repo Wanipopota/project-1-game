@@ -60,7 +60,15 @@ project-1-game
 
 We have created a web app called Joke Games. It is a website that displays lists of games that you can play and information about them, while always giving you the ability to ask for a joke whilst browsing.  
 
-INSERT IMAGES OF THE APP HERE
+<img width="1669" alt="Screenshot 2024-05-16 at 11 22 12 AM" src="https://github.com/Wanipopota/project-1-game/assets/164225533/01c8dc5b-2f32-445b-9d1c-af5fefedd736">
+
+<img width="1526" alt="Screenshot 2024-05-16 at 11 22 32 AM" src="https://github.com/Wanipopota/project-1-game/assets/164225533/da5f5d91-e485-42ee-b42c-f0212c8d2f06">
+
+<img width="1661" alt="Screenshot 2024-05-16 at 11 22 48 AM" src="https://github.com/Wanipopota/project-1-game/assets/164225533/c38ff1c5-599b-46c0-bb99-fda1c2524e82">
+
+<img width="1664" alt="Screenshot 2024-05-16 at 11 21 03 AM" src="https://github.com/Wanipopota/project-1-game/assets/164225533/1ea2713f-26d4-4e5d-9166-009fd6b5e68c">
+
+<img width="1617" alt="Screenshot 2024-05-16 at 11 21 32 AM" src="https://github.com/Wanipopota/project-1-game/assets/164225533/ccbea055-1bab-4a9a-9998-c2c37ea806c7">
 
 
 Link to project: LINK PROJECT HERE
