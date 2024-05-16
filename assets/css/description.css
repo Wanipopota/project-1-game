@@ -41,15 +41,20 @@ h1, h2 {
     background-color: #6A1B9A;
 }
 #game-descp-box{
-    margin: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-block-start: 3rem;
+    margin-block-end: 3rem;
 }
 #game-description {
     background-color: white;
     padding: 20px;
-    border-radius: 15px;  
+    border-radius: 15px; 
+    font-size: 25px; 
 }
 #game-image {
     border: 1px solid black;
+    border-radius: 15px;
 }
 #game-link {
     display: none;
@@ -74,6 +79,7 @@ h1, h2 {
     border: 1px solid black;
     display:block;
     margin-bottom: 20px;
+    border-radius: 15px;
 }
 #image-2 {
     width: 60%;
@@ -82,6 +88,7 @@ h1, h2 {
     border: 1px solid black;
     display: block;
     margin-bottom: 20px;
+    border-radius: 15px;
 }
 #image-3 {
     width: 60%;
@@ -90,6 +97,7 @@ h1, h2 {
     border: 1px solid black;
     display: block;
     margin-bottom: 20px;
+    border-radius: 15px;
 }
 #image-4 {
     width: 60%;
@@ -98,6 +106,7 @@ h1, h2 {
     border: 1px solid black;
     display: block;
     margin-bottom: 20px;
+    border-radius: 15px;
 }
 .rules-information {
     display: flex;
@@ -144,7 +153,6 @@ footer {
 #jokes-table {
     margin: 50px;
 }
-
 .flip-card {
     background-color: transparent;
     width: 400px;
@@ -152,6 +160,7 @@ footer {
     border: 1px solid #000000;
     perspective: 1000px; 
     display: flex;
+    border-radius: 15px;
   }
   .flip-card-inner {
     position: relative;
@@ -173,6 +182,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
   }
   .flip-card-front {
     background-color: #ffffff;
