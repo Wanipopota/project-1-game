@@ -24,9 +24,6 @@ h1, h2 {
     color: #faf3f3;
     text-align: center;
 }
-h1 {
-
-}
 h3{
     color: #faf3f3; 
 }
@@ -128,6 +125,7 @@ footer {
     border: 1px solid #000000;
     perspective: 1000px; 
     display: flex;
+    border-radius: 15px;
   }
   .flip-card-inner {
     position: relative;
@@ -149,6 +147,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
   }
   .flip-card-front {
     background-color: #ffffff;
@@ -170,7 +169,7 @@ footer {
     display: flex;
     justify-content: center;
     text-align: center;
-
+    margin: 25px;
   }
 .bottom-img {
     float: left;
